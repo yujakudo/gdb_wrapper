@@ -102,3 +102,4 @@ ENV/
 
 # env
 test/
+log*.txt

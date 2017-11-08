@@ -23,5 +23,8 @@ while 1:
         (rc, buff) = win32file.ReadFile(H_PIPE, 4096)
     except:
         break
-    string = buff.decode(ENCODING, "ignore")
-    sys.stdout.write(string)
+    if rc==0:
+        string = buff.decode(ENCODING, "ignore")
+        sys.stdout.write(string)
+
+H_PIPE.Close()

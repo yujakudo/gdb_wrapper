@@ -1,10 +1,11 @@
 @echo off
 set TARGET="B:/msys64/mingw64/bin/gdb.exe"
 set PYTHON3=python.exe
-rem set FLAGS=DLE
-set FLAGS=D
+set FLAGS=DS
 set TARGET_ENCODING=UTF-8
 set HOST_ENCODING=CP932
+
+rem set FLAGS=DSEL
 set THE_DIR=%~dp0
 
 echo "%FLAGS%" | find "E" >NUL
