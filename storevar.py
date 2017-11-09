@@ -57,7 +57,8 @@ class StoreVar:
             values = mtc.group(4).split()
             var = self.vars[name]
             org_val = re.escape(var["value"])
-            var["value"] += " " + values[1]
+            if len(values)>1:
+                var["value"] += " " + values[1]
             rep = var["line"]
             rep = re.sub('value=\"'+org_val+'\"', 'value=\"'+var["value"]+'\"', rep)
             return rep
